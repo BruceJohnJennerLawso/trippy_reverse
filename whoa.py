@@ -45,7 +45,7 @@ if(__name__ == "__main__"):
 		value = reversibleInteger(cy)
 		reverseValue = reversibleInteger(value.getValue()).getReversed().getValue()
 		print "%d, squared %d, %d reversed, %d reverse squared" % (cy, cy**2, reverseValue, reverseValue**2),
-		if((cy**2) == (reverseValue**2)):
+		if((reversibleInteger(cy**2).getReversed().getValue()) == (reversibleInteger(reverseValue**2).getValue())):
 			print "hit"
 			hits += 1
 		else:
