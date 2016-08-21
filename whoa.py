@@ -40,16 +40,16 @@ if(__name__ == "__main__"):
 	hits = 0
 	
 	lowerBound = 11
-	upperBound = 100
+	upperBound = 9000
 	for cy in range(lowerBound, upperBound):
 		value = reversibleInteger(cy)
 		reverseValue = reversibleInteger(value.getValue()).getReversed().getValue()
-		print "%d, squared %d, %d reversed, %d reverse squared" % (cy, cy**2, reverseValue, reverseValue**2),
+		
 		if((reversibleInteger(cy**2).getReversed().getValue()) == (reversibleInteger(reverseValue**2).getValue())):
+			print "%d, squared %d, %d reversed, %d reverse squared" % (cy, cy**2, reverseValue, reverseValue**2),
 			print "hit"
 			hits += 1
-		else:
-			print ","
+
 	print "%d hits in range(%d, %d)" % (hits, lowerBound, upperBound)		
 	
 	#print 422
